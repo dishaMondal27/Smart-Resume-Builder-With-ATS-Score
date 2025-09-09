@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-300 hover:scale-[1.02];
+  }
+  
+  .card-glass {
+    @apply bg-white/60 backdrop-blur-md rounded-2xl shadow-xl border border-white/40 hover:bg-white/70 transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-blue-300 text-gray-700 hover:text-blue-700 font-medium py-2.5 px-5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200 hover:border-gray-300;
+  }
+  
+  .textarea-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200 hover:border-gray-300;
+    resize: vertical;
+  }
+  
+  .section-tab {
+    @apply relative px-4 py-2.5 rounded-xl font-medium transition-all duration-300 hover:scale-105;
+  }
+  
+  .section-tab-active {
+    @apply bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg;
+  }
+  
+  .section-tab-inactive {
+    @apply bg-white/60 backdrop-blur-sm text-gray-600 hover:bg-white/80 hover:text-gray-800 border border-gray-200;
+  }
+}
